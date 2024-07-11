@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: pink;
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    display: block;
+    color: darkblue;
+    text-decoration: none;
+    padding: 15px 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: whitesmoke;
+    color: chocolate;
+}
+
+.scrolled {
+    background-color: orange;
+}
+
+section {
+    padding: 100px 20px;
+    padding-top: 140px; 
+    text-align: center;
+}
+
+section img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+#home {
+    background-color: #f4f4f4;
+}
+
+#about {
+    background-color: #e2e2e2;
+}
+
+#services {
+    background-color: #cfcfcf;
+}
+
+#contact {
+    background-color: #bcbcbc;
+}
+
+.text{
+    text-align: center;
+    background-color: black;
+    color: white;
+    height: 10vh;
+    font-size: 17px;
+    padding-top: 50px;
+}
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: row; /* Stacks the menu items horizontally on small screens */
+    }
+    nav ul li {
+        margin: 10px 0; /* Adds margin between items on small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul li a {
+        padding: 10px 15px; /* Reduces padding on very small screens */
+    }
+    section {
+        padding: 80px 10px; /* Reduces section padding on very small screens */
+        padding-top: 120px; /* Adjust the top padding to ensure sections are not overlapped by the navbar */
+    }
+}
